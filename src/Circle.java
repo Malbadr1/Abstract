@@ -1,9 +1,14 @@
 public class Circle extends Shape{
     private double radius;
 
-    public Circle(String name, double radius) {
-        super(name);
+    public Circle( double radius) {
+        super("Circle");
         this.radius = radius;
+    }
+
+    @Override
+    public String getName() {
+        return" Circle";
     }
 
     @Override
@@ -21,7 +26,7 @@ public class Circle extends Shape{
     }
 
     public static void main(String[] args) {
-        Circle circle=new Circle("Circle",2);
+        Circle circle=new Circle(2);
         System.out.println(circle);
     }
 }

@@ -1,11 +1,16 @@
 public class Cube extends Shape {
     private double side;
 
-    public Cube(String name, double side) {
-        super(name);
+    public Cube( double side) {
+        super(" Cube");
         this.side = side;
     }
 
+
+    @Override
+    public String getName() {
+        return "cube";
+    }
 
     @Override
     public void drawShape() {
@@ -22,7 +27,7 @@ public class Cube extends Shape {
     }
 
     public static void main(String[] args) {
-        Cube cube=new Cube("Cube",2);
+        Cube cube=new Cube(2);
         System.out.println(cube);
     }
 }

@@ -2,15 +2,19 @@ public class Rectangle extends Shape {
     private double length;
     private  double width;
 
-    public Rectangle(String name, double length, double width) {
+    public Rectangle( double length, double width) {
         super("Rectangle");
         this.length = length;
         this.width = width;
     }
 
     @Override
+    public String getName() {
+        return "Rectangle";
+    }
+
+    @Override
     public void drawShape() {
-        System.out.println("Drawing a rectangle...");
 
     }
 
@@ -27,7 +31,8 @@ public class Rectangle extends Shape {
     }
 
     public static void main(String[] args) {
-        Rectangle rectangle=new Rectangle(" a rectangle",2,2);
+        Rectangle rectangle=new Rectangle(2,2);
         System.out.println(rectangle);
+
     }
 }
